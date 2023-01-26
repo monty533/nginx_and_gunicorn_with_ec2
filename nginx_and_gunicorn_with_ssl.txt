@@ -46,7 +46,7 @@ step 14 ==== cd /etc/nginx/sites-available/
                 server_name -> (y  likha hoga phle se) ip_ya_domain_name;
                 location/{
                     include proxy_params;
-                    proxy_pass http://unix:/home/ubuntu/project_name/app:sock;
+                    proxy_pass http://unix:/home/ubuntu/project_name/app.sock;
                 }
 step 15 ++++ reload nginx (sudo systemctl reload nginx)
 
