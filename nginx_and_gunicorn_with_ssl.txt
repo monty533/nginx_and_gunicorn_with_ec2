@@ -53,9 +53,13 @@ step 15 ++++ reload nginx (sudo systemctl reload nginx)
  +++++++ To configure static file +++++++++
 
 step 16 ++++ add some configuration
-            location/static/{
+        #root /var/www/html;           #### comment thse lines
+        # Add index.php to the list if you are using PHP
+        #index index.html index.htm index.nginx-debian.html;
+
+            location /static/{
                 autoindex on;
-                alias /home/ubuntu/project_name/static/;
+                alias /home/ubuntu/project_name/static/;     #### jha bhi static ka folder hoga
             }
 step 17 ++++ reload nginx (sudo systemctl reload nginx)
 
